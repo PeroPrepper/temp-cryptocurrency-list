@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Price Change Component Rendering Renders correctly with  positive input value. 1`] = `
+<b
+  style={
+    Object {
+      "color": "#009933",
+    }
+  }
+>
+  10
+  %
+</b>
+`;
+
+exports[`Price Change Component Rendering Renders correctly with passed negative input value. 1`] = `
+<b
+  style={
+    Object {
+      "color": "#ff0000",
+    }
+  }
+>
+  -15
+  %
+</b>
+`;
