@@ -49,6 +49,12 @@
   color: white;
 }
 
+.cryptoCurrencyTable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
 .tableRow {
   background-color: #fff;
   border: none;

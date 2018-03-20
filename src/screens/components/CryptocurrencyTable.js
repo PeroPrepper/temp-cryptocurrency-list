@@ -31,14 +31,7 @@ class CryptocurrencyTable extends Component {
       return <div>Loading...</div>;
     } else
       return (
-        <table
-          style={{
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginTop: "30px",
-            borderWidth: "0px"
-          }}
-        >
+        <table className="cryptoCurrencyTable">
           <thead>
             <tr>
               <th>Rank</th>
