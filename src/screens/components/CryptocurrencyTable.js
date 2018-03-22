@@ -6,7 +6,7 @@ import { browserHistory } from "react-router";
 import { setDetailedCurrency } from "../../actions/globals-actions";
 import { setCookie } from "redux-cookie";
 
-import { CellChange } from "./HelperCells";
+import { CellChange } from "./presentational/HelperCells";
 
 class CryptocurrencyTable extends Component {
   /* When currency is selected, save it to store and to a cookie, then navigate to details page. */

@@ -17,7 +17,7 @@ import {
 
 import { showErrorFetchingCurrencies } from "./actions/currencies-actions";
 
-import { CellChange } from "./screens/components/HelperCells";
+import { CellChange } from "./screens/components/presentational/HelperCells";
 import renderer from "react-test-renderer";
 
 // TEST A COMPONENT

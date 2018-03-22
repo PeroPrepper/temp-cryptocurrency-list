@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { CellChange } from "./HelperCells";
+import { DetailItem } from "./presentational/DetailItem";
+import { CellChange } from "./presentational/HelperCells";
 
 import { connect } from "react-redux";
 class CryptocurrencyDetail extends Component {
@@ -27,70 +28,80 @@ class CryptocurrencyDetail extends Component {
               {this.props.currencyDetail.currencyDetailInfo["name"]} Details
             </h1>
           </div>
-          <div>
-            <b>Rank: </b> {this.props.currencyDetail.currencyDetailInfo["rank"]}
-          </div>
-          <div>
-            <b>Name: </b> {this.props.currencyDetail.currencyDetailInfo["name"]}
-          </div>
-          <div>
-            <b>Symbol: </b>
-            {this.props.currencyDetail.currencyDetailInfo["symbol"]}
-          </div>
-          <div>
-            <b>Price ({currentFiat.toUpperCase()}): </b>
-            {this.props.currencyDetail.currencyDetailInfo[priceKey]}
-          </div>
-          <div>
-            <b>Volume 24h ({currentFiat.toUpperCase()}): </b>
-            {this.props.currencyDetail.currencyDetailInfo[volumeKey]}
-          </div>
-          <div>
-            <b>Market cap ({currentFiat.toUpperCase()}): </b>
-            {this.props.currencyDetail.currencyDetailInfo[marketCapKey]}
-          </div>
-          <div>
-            <b>Price (BTC): </b>
-            {this.props.currencyDetail.currencyDetailInfo["price_btc"]}
-          </div>
-          <div>
-            <b>Change 1h: </b>
-            <CellChange
-              change={
-                this.props.currencyDetail.currencyDetailInfo[
-                  "percent_change_1h"
-                ]
-              }
-            />
-          </div>
-          <div>
-            <b>Change 24h: </b>
-            <CellChange
-              change={
-                this.props.currencyDetail.currencyDetailInfo[
-                  "percent_change_24h"
-                ]
-              }
-            />
-          </div>
-          <div>
-            <b>Change 7d: </b>
-            <CellChange
-              change={
-                this.props.currencyDetail.currencyDetailInfo[
-                  "percent_change_7d"
-                ]
-              }
-            />
-          </div>
-          <div>
-            <b>Total supply: </b>
-            {this.props.currencyDetail.currencyDetailInfo["total_supply"]}
-          </div>
-          <div>
-            <b>Available supply: </b>
-            {this.props.currencyDetail.currencyDetailInfo["available_supply"]}
-          </div>
+          <DetailItem
+            title="Rank"
+            value={this.props.currencyDetail.currencyDetailInfo["rank"]}
+          />
+          <DetailItem
+            title="Name"
+            value={this.props.currencyDetail.currencyDetailInfo["name"]}
+          />
+          <DetailItem
+            title="Symbol"
+            value={this.props.currencyDetail.currencyDetailInfo["symbol"]}
+          />
+          <DetailItem
+            title={"Price (" + currentFiat.toUpperCase() + ")"}
+            value={this.props.currencyDetail.currencyDetailInfo[priceKey]}
+          />
+          <DetailItem
+            title={"Volume 24h (" + currentFiat.toUpperCase() + ")"}
+            value={this.props.currencyDetail.currencyDetailInfo[volumeKey]}
+          />
+          <DetailItem
+            title={"Market cap (" + currentFiat.toUpperCase() + ")"}
+            value={this.props.currencyDetail.currencyDetailInfo[marketCapKey]}
+          />
+          <DetailItem
+            title="Price (BTC)"
+            value={this.props.currencyDetail.currencyDetailInfo["price_btc"]}
+          />
+          <DetailItem
+            title="Change 1h"
+            value={
+              <CellChange
+                change={
+                  this.props.currencyDetail.currencyDetailInfo[
+                    "percent_change_1h"
+                  ]
+                }
+              />
+            }
+          />
+          <DetailItem
+            title="Change 24h"
+            value={
+              <CellChange
+                change={
+                  this.props.currencyDetail.currencyDetailInfo[
+                    "percent_change_24h"
+                  ]
+                }
+              />
+            }
+          />
+          <DetailItem
+            title="Change 7d"
+            value={
+              <CellChange
+                change={
+                  this.props.currencyDetail.currencyDetailInfo[
+                    "percent_change_7d"
+                  ]
+                }
+              />
+            }
+          />
+          <DetailItem
+            title="Total supply"
+            value={this.props.currencyDetail.currencyDetailInfo["total_supply"]}
+          />
+          <DetailItem
+            title="Available supply"
+            value={
+              this.props.currencyDetail.currencyDetailInfo["available_supply"]
+            }
+          />
         </div>
       );
     }
