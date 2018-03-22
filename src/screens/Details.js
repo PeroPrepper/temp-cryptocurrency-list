@@ -10,7 +10,7 @@ import {
   setDetailedCurrency,
   setFiatCurrency
 } from "../actions/globals-actions";
-import { setCookie, getCookie } from "redux-cookie";
+import { getCookie } from "redux-cookie";
 
 class Details extends React.Component {
   constructor() {
@@ -120,7 +120,6 @@ const mapActionsToProps = {
   onSetCurrencyDetail: setCurrencyDetail,
   onSetFiatCurrency: setFiatCurrency,
   onSetDetailedCurrency: setDetailedCurrency,
-  onSetCookie: setCookie,
   onGetCookie: getCookie
 };
 

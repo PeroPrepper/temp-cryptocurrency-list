@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { browserHistory } from "react-router";
 
-import { fetchAllCurrencies } from "../../actions/currencies-actions";
 import { setDetailedCurrency } from "../../actions/globals-actions";
 import { setCookie } from "redux-cookie";
 
@@ -75,7 +74,6 @@ const mapStateToProps = state => {
 };
 
 const mapActionsToProps = {
-  onFetchAllCurrencies: fetchAllCurrencies,
   onSetDetailedCurrency: setDetailedCurrency,
   onSetCookie: setCookie
 };

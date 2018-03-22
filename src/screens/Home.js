@@ -3,10 +3,6 @@ import { connect } from "react-redux";
 
 import CryptocurrencyTable from "./components/CryptocurrencyTable";
 import { fetchAllCurrencies } from "../actions/currencies-actions";
-import {
-  setDetailedCurrency,
-  setFiatCurrency
-} from "../actions/globals-actions";
 
 class Home extends React.Component {
   componentDidMount() {
@@ -48,9 +44,7 @@ const mapStateToProps = state => {
 };
 
 const mapActionsToProps = {
-  onFetchAllCurrencies: fetchAllCurrencies,
-  onSetFiatCurrency: setFiatCurrency,
-  onSetDetailedCurrency: setDetailedCurrency
+  onFetchAllCurrencies: fetchAllCurrencies
 };
 
 export default connect(mapStateToProps, mapActionsToProps)(Home);
